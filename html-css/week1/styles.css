@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  /* for page remove margin  */
+  padding: 0px;
+  /* for page remove padding */
+  box-sizing: border-box;
+  /* creat a border box */
+}
+
+body{
+width: 100%;
+font-size: 24px;
+/*margin: 100px;
+padding:0 100px;*/
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    flex-direction: row;
+    list-style-type: none;
+    border: 1px solid #00CED1;
+    background-color: #00CED1;
+    color: black;
+    padding: 30px 30px;
+}
+.souji{
+  height: 150px;
+}
+.left {
+  display: flex;
+  flex-direction:row;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-right: 320px;
+}
+.right {
+  display: flex;
+  flex-direction:row;
+  list-style-type: none;
+  margin-right: 80px;
+  padding-top: 10px;
+
+}
+ .right li{
+  margin-right: 10px;
+
+}
+main, footer {
+  background-color: #EEEEEE;
+  padding: 30px;
+}
+.first{
+  display: flex;
+  flex-direction: row;
+  padding: 30px 0;
+}
+.first p{
+  width: 70%;
+  margin-left: 80px;
+}
+
+.first {
+  display: flex;
+  flex-direction:row;
+  list-style-type: none;
+}
+.second {
+  padding-left: 80px;
+}
+.two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 80px;
+}
+.final {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 80px;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+}
