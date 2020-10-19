@@ -1,3 +1,7 @@
 conjuring
 anabelle
+<<<<<<< HEAD
 anabelle2
+=======
+conjuring2
+>>>>>>> 96e26ab6966e538e034e76061943742c506379ca
