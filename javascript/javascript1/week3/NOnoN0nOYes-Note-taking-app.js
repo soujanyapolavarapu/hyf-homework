@@ -6,6 +6,7 @@ saveNote("Do laundry", 2);
 console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do laundry', id: 2}]
 //getNote(5);
 const firstNote = getNote(1);
+console.log(firstNote);
 //console.log(firstNote); // {content: 'Pick up groceries', id: 1}
 logOutNotesFormatted();
 
@@ -22,20 +23,17 @@ function saveNote(content, id) {
 
 //Get a note
 function getNote(id) {
-  if (id == '' || typeof(id) == 'string') {
+  if (id === ' ' || typeof id !== 'number') {
     console.log('Id neither blank nor string');
   } else {
     for (i = 0; i < notes.length; i++) {
-      if (id == notes[i].id) {
-        var idFound = 'found';
-        console.log(notes[i]);
+      if (id === notes[i].id) {
+      return notes[i]
       }
     }
-    if (idFound != 'found') {
-      console.log('Id not found');
     }
   }
-}
+
 
 
 //Read all notes
