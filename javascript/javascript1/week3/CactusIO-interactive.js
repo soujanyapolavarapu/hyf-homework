@@ -24,7 +24,7 @@ function addActivity(date, activity, duration){
 
 //Show my status
 function showStatus(){
-  if(activities.length == 0){
+  if(activities.length === 0){
     console.log('Add some activities before calling showStatus');
   }
   else{
