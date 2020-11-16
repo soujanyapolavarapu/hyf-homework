@@ -18,24 +18,24 @@ const seriesDurations = [
     minutes: 30,
   },
 ];
-var avgLifeSpan = 80;
+const avgLifeSpan = 80;
 const hoursInDay = 24;
 const daysInYear = 365.5;
 //console.log('soujanya');
 console.log(seriesDurations);
 //console.log(seriesDurations[0].title);
-var durationOfGameOfThronesInHours= (seriesDurations[0].days * hoursInDay ) + seriesDurations[0].hours ;
+const durationOfGameOfThronesInHours= (seriesDurations[0].days * hoursInDay ) + seriesDurations[0].hours ;
 //console.log(durationOfGameOfThronesInHours);
 //console.log(seriesDurations[1].title);
-var durationOfJustAddMagicInHours= (seriesDurations[1].days * hoursInDay ) + seriesDurations[1].hours + (seriesDurations[1].minutes/60) ;
+const durationOfJustAddMagicInHours= (seriesDurations[1].days * hoursInDay ) + seriesDurations[1].hours + (seriesDurations[1].minutes/60) ;
 //console.log(durationOfJustAddMagicInHours);
 //console.log(seriesDurations[2].title);
-var durationOfMystoryCityInHours= (seriesDurations[2].days * hoursInDay ) + seriesDurations[2].hours + (seriesDurations[2].minutes/60) ;
+const durationOfMystoryCityInHours= (seriesDurations[2].days * hoursInDay ) + seriesDurations[2].hours + (seriesDurations[2].minutes/60) ;
 //console.log(durationOfMystoryCityInHours);
 logOutSeriesText();
 
 function logOutSeriesText() {
-var avgLifeSpanInHours = daysInYear * hoursInDay * avgLifeSpan;
+const avgLifeSpanInHours = daysInYear * hoursInDay * avgLifeSpan;
 //console.log(avgLifeSpanInHours);
 var percentageOfGameOfThrones= (durationOfGameOfThronesInHours * 100)/ avgLifeSpanInHours;
 var gameOfThrones= percentageOfGameOfThrones.toFixed(2);
