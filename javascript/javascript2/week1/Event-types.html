@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Event Types</title>
+</head>
+
+<body>
+  <script type=text/javascript>
+    // Give the user the possibility to select when the spirit animal should be created.
+    let h2_tag = document.createElement('h2');
+    h2_tag.innerHTML = "User select the option to create Animal Sprit Name";
+    document.body.appendChild(h2_tag);
+
+   //creating form element and inserting radio buttons and labels by appending with radio buttons
+    let form_tag = document.createElement('form');
+    document.body.appendChild(form_tag);
+
+    //Now i have to create 3 radio buttons
+    let radio_button_1 = document.createElement('input');
+    radio_button_1.setAttribute("type", "radio");
+    radio_button_1.setAttribute("name", "radio");
+    radio_button_1.setAttribute("value", "click_button");
+    radio_button_1.setAttribute("id", "radio1");
+    form_tag.appendChild(radio_button_1)
+
+    let radio_button_label1 = document.createElement('label');
+    radio_button_label1.setAttribute("for", "radio1");
+    radio_button_label1.innerHTML = "User clicks the button";
+    form_tag.appendChild(radio_button_label1);
+
+    let radio_button_2 = document.createElement('input');
+    radio_button_2.setAttribute("type", "radio");
+    radio_button_2.setAttribute("name", "radio");
+    radio_button_2.setAttribute("value", "hover_button");
+    radio_button_2.setAttribute("id", "radio2");
+  form_tag.appendChild(radio_button_2)
+
+    let radio_button_label2 = document.createElement('label');
+    radio_button_label2.setAttribute("for", "radio2");
+    radio_button_label2.innerHTML = "User hovers the input field";
+    form_tag.appendChild(radio_button_label2);
+
+    let radio_button_3 = document.createElement('input');
+    radio_button_3.setAttribute("type", "radio");
+    radio_button_3.setAttribute("name", "radio");
+    radio_button_3.setAttribute("value", "while_type");
+    radio_button_3.setAttribute("id", "radio3");
+    form_tag.appendChild(radio_button_3);
+
+    let radio_button_label3 = document.createElement('label');
+    radio_button_label3.setAttribute("for", "radio3");
+    radio_button_label3.innerHTML = "User while writing text in input-field";
+    form_tag.appendChild(radio_button_label3);
+
+    let br_tag = document.createElement('br');
+    document.body.appendChild(br_tag);
+
+    let label_name = document.createElement('label');
+    label_name.setAttribute("for", "user_input_field");
+    label_name.innerHTML = "Name";
+    document.body.appendChild(label_name);
+
+    let input_name = document.createElement('input');
+    input_name.setAttribute("type", "text");
+    input_name.setAttribute("name", "name");
+    input_name.setAttribute("value", "");
+    input_name.setAttribute("id", "user_input_field");
+    document.body.appendChild(input_name);
+
+    let h3_tag = document.createElement('h3');
+    h3_tag.setAttribute("id", "h3");
+    document.body.appendChild(h3_tag);
+
+    let button = document.createElement('button');
+    button.setAttribute("name", "button");
+    button.setAttribute("id", "buttonClick");
+    button.innerHTML="Click Here";
+    document.body.appendChild(button);
+
+    const accessButton = document.getElementById("buttonClick");
+   let randomNumber = Math.floor(Math.random() * 10) ;
+    const spritAnimal =
+    function() {
+         const inputField = document.getElementById("user_input_field").value;
+         h3_tag =  document.getElementById('h3')
+         if(inputField === ""){
+           h3_tag.innerHTML="Please enter your Name";
+         }
+         else{
+        const spritAnimalName =['wolf','Alligator','Badger', 'Bee','Bobcat', 'Blue Jay','ant','butterfly','owl','snake'];
+       randomSpritAnimal = spritAnimalName[randomNumber];
+    h3_tag.innerHTML= `${inputField} - ${randomSpritAnimal}` ;
+     }
+    }
+
+
+    form_tag.onclick = function () {
+        if(document.getElementById("radio1").checked ){
+          accessButton.addEventListener('click', spritAnimal);
+        }
+        else if(document.getElementById("radio2").checked){
+            document.getElementById("user_input_field").addEventListener('mouseover', spritAnimal);
+          }
+          else if(document.getElementById("radio3").checked) {
+            document.getElementById("user_input_field").addEventListener('keydown', spritAnimal);
+          }
+        }
+  </script>
+</body>
+
+</html>
