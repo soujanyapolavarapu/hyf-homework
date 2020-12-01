@@ -8,8 +8,8 @@ function danishLetters(string) {
   let countOfå = 0;
   let countOfø = 0;
   let countOfæ = 0;
-  let strSplit = string.split('');
-  for (i = 0; i < strSplit.length; i++) {
+  const strSplit = string.split('');
+  for (let i = 0; i < strSplit.length; i++) {
     if (strSplit[i] === 'å') {
       countOfå = countOfå + 1;
     } else if (strSplit[i] === 'ø') {
@@ -18,27 +18,19 @@ function danishLetters(string) {
       countOfæ = countOfæ + 1;
     }
   }
-
   const total = countOfå + countOfø + countOfæ;
   const result = {
     total: 0,
-    æ: 0,
-    ø: 0,
-    å: 0
   }
   result.total = total;
+  if(countOfæ != 0){
   result.æ = countOfæ;
-  result.ø = countOfø;
-  result.å = countOfå;
-
-  if (countOfæ === 0) {
-    delete result.æ;
   }
-  if (countOfø === 0) {
-    delete result.ø;
+  if(countOfø != 0){
+    result.ø = countOfø;
   }
-  if (countOfå === 0) {
-    delete result.å
+  if(countOfå != 0){
+    result.å = countOfå;
   }
   return result;
 }
