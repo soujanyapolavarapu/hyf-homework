@@ -1,14 +1,15 @@
 const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
+//const danishWords =["ø", "bil", "plante", "kaffe", "bog", "planetarium"]
 //notThisFunctionName(danishWords); // returns 'ø'
 findShortestWord(danishWords);
 
 
 function findShortestWord(danishWords) {
-  let shortestWord;
-  let shortestWordLength = danishWords[0].length;
+  let shortestWord = danishWords[0];
+//  let shortestWordLength = danishWords[0];
   for (let i = 1; i < danishWords.length; i++) {
-    if (shortestWordLength > danishWords[i].length) {
-      shortestWordLength = danishWords[i].length;
+    if (danishWords[i].length < shortestWord.length) {
+      //shortestWord = danishWords[i].length;
       shortestWord = danishWords[i];
 
     }
