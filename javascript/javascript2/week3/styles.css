@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  /* for page remove margin  */
+  padding: 0px;
+  /* for page remove padding */
+  box-sizing: border-box;
+  /* creat a border box */
+}
+
+body {
+  font-style: italic;
+  text-align: center;
+}
+
+h1 {
+  font-family: cursive;
+  text-align: center;
+  font-size: 28;
+  padding-top: 100px;
+}
+
+#number {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.containers {
+  margin-top: 30px;
+}
+
+.containers button {
+  background-color: lightpink;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+#button:hover, #restart_button:hover {
+  background-color: violet;
+  transition-duration: 0.8s;
+}
+
+.division_containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+h3, h4 {
+  color: purple;
+}
+
+.div_one, .div_two {
+  margin: 10px 0px;
+  padding: 90px 50px;
+  border-top: 2px solid black;
+}
+
+.div_one h3, .div_one h4, .div_two h3, .div_two h4 {
+  margin: 10px;
+}
+
+.div_one {
+  border-right: 1px solid black;
+}
+
+.div_two {
+  border-left: 1px solid black;
+}
+
+#my-canvas-one, #my-canvas-two {
+  width: 200px;
+  height: 250px;
+  position: absolute;
+  top: 300px;
+}
+
+#my-canvas-one {
+  left: 450px;
+}
+
+#my-canvas-two {
+  right: 400px;
+}
