@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="styles.css">
+  </link>
+</head>
+
+<body>
+  <h1 id="h1">Fastest Presser</h1>
+  <input type='numer' id='number' placeholder='Set Seconds'><br>
+  <div class="containers">
+    <button id="button">Start game!</button>
+    <button id="restart_button">Restart Game!</button>
+    <h4 id="countdown_starts"></h4>
+    <h3 id="game_info"></h3>
+    </form>
+    <div class="division_containers">
+      <div class='div_one'>
+        <h3>Press S</h3>
+        <h4 id="count-s"></h4>
+      </div>
+      <div class='div_two'>
+        <h3>Press L</h3>
+        <h4 id="count-l"></h4>
+      </div>
+      <canvas id="my-canvas-one"></canvas>
+      <canvas id="my-canvas-two"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.13/dist/index.min.js"></script>
+    <script src="The-fastest-presser-in-this-realm.js"></script>
+</body>
+</html>
