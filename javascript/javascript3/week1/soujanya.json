@@ -1,0 +1,53 @@
+[{
+		"movieName": "Bahubali",
+		"song": "Mamathala Thalli",
+		"id": 101,
+		"rating": {
+			"good": true,
+			"bad": false
+		},
+		"type": [
+			"tempo"
+		]
+	},
+	{
+		"movieName": "Arundhathi",
+		"song": "Chandamama Nuvve Nuvve",
+		"id": 102,
+		"rating": {
+			"good": true,
+			"bad": false
+		},
+		"type": [
+			"rhythm",
+			"melody"
+		]
+	},
+	{
+		"movieName": "Bagamathi",
+		"song": "mandhara",
+		"id": 103,
+		"rating": {
+			"good": true,
+			"bad": false
+		},
+		"type": [
+			"rhythm",
+			"melody"
+		]
+	},
+	{
+		"movieName": "Manam",
+		"song": "Kani Penchina Ma Ammake",
+		"id": 104,
+		"rating": {
+			"good": true,
+			"bad": false
+		},
+		"type": [
+			"tempo",
+			"rhythm",
+			"melody"
+		]
+	}
+]
