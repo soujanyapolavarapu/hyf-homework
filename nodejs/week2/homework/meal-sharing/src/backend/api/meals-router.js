@@ -8,7 +8,7 @@ router.get("/:id", async (request, response) => {
    response.status(400).send();
  }
   else{
- const mealsId = meals.filter((meal)=> meal.id == parseInt(request.params.id));
+ const mealsId = meals.filter((meal)=> meal.id === parseInt(request.params.id));
 if(mealsId.length === 0 ){
   response.send(`Requested meal Id: ${request.params.id} is Not Available`);
 } else{
@@ -32,7 +32,7 @@ switch(true){
       response.status(400).send();
     }
     else{
-    const mealsPrice = meals.filter((meal)=>meal.price <= parseInt(request.query.maxPrice));
+    const mealsPrice = meals.filter((meal)=>meal.price < parseInt(request.query.maxPrice));
     if(mealsPrice.length === 0 ){
       response.send(`Requested meal price under: ${request.query.maxPrice} is/are Not Available`);
      }
