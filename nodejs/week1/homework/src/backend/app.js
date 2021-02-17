@@ -27,14 +27,13 @@ app.get("/cheap-meals", async (request, response) => {
 });
 
 app.get("/large-meals", async (request, response) => {
-  const largeMeals = mealReview.filter((item)=>item.price>30);
+  const largeMeals = mealReview.filter(numOfPersons=>numOfPersons.maxNumberOfGuests>=4);
   response.send(largeMeals);
 });
 
 app.get("/meal", async (request, response) => {
   //Math.floor(Math.random()* 10);
   const mealobj = mealReview[Math.floor(Math.random() * mealReview.length)];
-console.log(mealobj)
   response.send(mealobj);
 });
 
