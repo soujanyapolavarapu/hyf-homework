@@ -1,4 +1,4 @@
-.todo-App{
+.todo-app{
   font-family: cursive;
   display:flex;
   justify-content: center;
@@ -8,11 +8,6 @@
   background-color: palegoldenrod;
   border:2px solid gray;
 
-}
-
- li{  
-  padding-left:10px;
-  padding:10px; 
 }
 
 .todo-header{
