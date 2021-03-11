@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.styles{
+  width: 700px;
+  margin-left: 350px;
+  border: 2px solid black; 
+  box-shadow: slategrey;
+  background-color: rgb(235, 231, 228);
+}
+body{
+  background-color: rosybrown;
+}
+ button{
+   box-shadow: sienna;
+   background-color: rgb(223, 215, 215);
+ }
+div{
+  padding: 5px;
+}
+h1,form{
+  border: 2px solid black;
+  width: 500px;
+  margin-left: 450px;
+  background-color: rgb(238, 215, 196);
+}
+
+
+
+
