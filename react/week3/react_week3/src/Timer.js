@@ -18,7 +18,7 @@ const Timer= ()=> {
 
     return(
         <div>
-            <h1>You have used {time} seconds</h1>
+            <h2>You have used {time} seconds</h2>
         </div>
     )
 }
