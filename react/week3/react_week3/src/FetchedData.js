@@ -16,7 +16,20 @@ import Timer from './Timer.js';
        setDeadline('')
    }
 
+   const minDate=()=>{
+    let newDate = new Date()
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+    
+  const currentDate= `${year}${'-'}${month<10?`0${month}`:`${month}`}${'-'}${date}`;
+  return currentDate;
+
+   }
+            
+
      return(
+         <div>
          <form onSubmit={onSubmit}>
          <div>
              <label htmlFor='description'>Todo Description</label>
@@ -38,6 +51,7 @@ import Timer from './Timer.js';
          <input
          type='date' 
          id='deaadline'
+         min={minDate()}
          value={deadline}
          placeholder='Deadline'
         onChange={(e)=>{
@@ -49,7 +63,9 @@ import Timer from './Timer.js';
          />
          </div>
          <button type='submit'>Add Todo</button>
-         </form>  
+         </form> 
+         
+         </div>  
      )
  }
 
@@ -66,13 +82,15 @@ import Timer from './Timer.js';
         onUpdate(id,newDescription)
     }
     return (
-        <div>
+        <div className='todo'>
+            <div className='items'>
             {edit?<input type='text' value={newDescription} onChange={(e)=>setNewDescription(e.target.value)}/>:
             <h3 style={{ textDecoration : check ? 'line-through':'none' }}>
                 {id} {description} {deadline}:
             </h3>
             }
             <input type="checkbox" checked={check}  onChange={onCheck}/>
+            </div>
             <button onClick={onDelete}>Delete</button>
             <button onClick={onEdit}>{edit?'Update':'Edit'}</button>
         </div>
@@ -85,7 +103,6 @@ const Children =({children})=>{
         </div>
     )
 }
-
 
 function FetchedData(){
     const [todo, setTodo]= useState([]);
@@ -104,23 +121,10 @@ function FetchedData(){
             
      const addTodo=(description,deadline)=>{
             const id=todo.length +1;
-            let newDate = new Date()
-            let date = newDate.getDate();
-            let month = newDate.getMonth() + 1;
-            let year = newDate.getFullYear();
-            
-          const currentDate= `${year}${'-'}${month<10?`0${month}`:`${month}`}${'-'}${date}`;
-          
-            const newTodo ={id,description,deadline}
-            if(description==='' || deadline===''){
-                console.log('please enter valid inputs')
-                setTodo(todo)
-            }else if(deadline < currentDate){
-                console.log('please enter valid deadline date ')
-                setTodo(todo)
-            }else{
-                setTodo([...todo, newTodo])
-            } 
+            if(description && deadline){
+                const newTodo ={id,description,deadline}
+               return setTodo([...todo, newTodo])
+            }
         }    
      
      const deleteTodo=(id)=>{
@@ -145,10 +149,11 @@ function FetchedData(){
         <div>
             <h1>Todolist</h1>
             <InputData addTodo={addTodo}/>
+            {}
             <Timer />
            { todo.length>0?
            todo.map(todoItem=>(
-               < Children className='styles'>
+               < Children >
 
                     < Todo
                           key={todoItem.id}
