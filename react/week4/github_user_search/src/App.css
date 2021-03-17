@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  background-color: palegoldenrod;
+}
+li{
+  list-style-type: none;
+}
+input{
+  width: 300px;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
