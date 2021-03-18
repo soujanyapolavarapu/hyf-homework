@@ -1,10 +1,10 @@
 import './App.css';
-import FetchedData from './FetchedData.js'
+import TodoList from './TodoList.js'
 
 function App() {
   return (
     <div className="App">
-    <FetchedData />
+    <TodoList />
     </div>
   );
 }
