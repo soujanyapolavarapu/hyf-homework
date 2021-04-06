@@ -1,6 +1,6 @@
 
-  let date = new Date();
-  let today = date.getDay();
+  const date = new Date();
+  const today = date.getDay();
   const daysInWeek =['Sunday','Monday', 'Tuesday','Wednesday','Thursday','Friday','Saturday'];
   function getEventWeekday(numOfdays) {
   let eventDay =(numOfdays + today)% 7;
