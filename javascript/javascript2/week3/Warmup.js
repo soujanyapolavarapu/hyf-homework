@@ -72,10 +72,9 @@ runAfterDelay(10,logsOutEarth/*function(){console.log('should logged after 5 sec
 //Check if we have double clicked on the page. A double click is defined by two clicks within 0.5 seconds.
 //If a double click has been detected, log out the text: "double click!"
 const functionDoubleClick = ()=>{
-  console.log('double click!');
-    //setTimeout(()=>{console.log('double click!')},0.5 *1000);
+    setTimeout(()=>{console.log('double click!')}, 0.5*1000);
   }
-document.getElementById('button-three').addEventListener('dblclick', functionDoubleClick);
+document.getElementById('button-three').addEventListener('click', functionDoubleClick);
 
 
 /*Create a function called jokeCreator that has three parameters: shouldTellFunnyJoke
@@ -107,7 +106,7 @@ function mul(a,b){
   return a*b;
 }
 const functionsArray =[add, sub, mul];
-for(i=0; i<functionsArray.length; i++){
+for(let i=0; i<functionsArray.length; i++){
   console.log(functionsArray[(i)]);
 }
 

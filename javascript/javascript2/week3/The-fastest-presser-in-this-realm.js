@@ -1,5 +1,8 @@
 "use strict"
 
+ let countS=0;
+ let countL=0;
+
 const userInput = document.getElementById('number');
 const button = document.getElementById('button');
 const gameInfo = document.getElementById('game_info');
@@ -12,6 +15,7 @@ function gameEnd() {
     var confettiSettings = {
       target: 'my-canvas-one'
     };
+    // @ts-ignore
     var confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
   } else if (countOne < countTwo) {
@@ -19,6 +23,7 @@ function gameEnd() {
     var confettiSettings = {
       target: 'my-canvas-two'
     };
+    // @ts-ignore
     var confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
   } else if (countS === 0 && countL === 0) {
@@ -27,17 +32,21 @@ function gameEnd() {
     gameInfo.innerHTML = "Its a Tie ";
     console.log('Its a Tie');
 
-  }
+  }console.log(countS  ,  countL)
 }
 
 button.addEventListener('click', function gameStart() {
+  // @ts-ignore
+  document.getElementById("number").disabled = true;
+  // @ts-ignore
   let time = userInput.value;
   //  console.log(Number(time));
   if (time === "" || Number.isNaN(Number(time))) {
     gameInfo.innerHTML = "Enter time in seconds"
   } else {
-    gameInfo.innerHTML = "Game will start and Time limit is set for " + time + " seconds";
+    // gameInfo.innerHTML = "Game will start and Time limit is set for " + time + " seconds";
 
+    // @ts-ignore
     const timeLimit = time * 1000;
     let countdowntime = setInterval(countdownStarts, 1000);
 
@@ -59,17 +68,23 @@ let countTwo = 0;
 
 function keyPresses(event) {
   //console.log(event);
-  const countS = document.getElementById('count-s');
-  const countL = document.getElementById('count-l');
+  let countS = document.getElementById('count-s');
+  console.log(countS)
+  let countL = document.getElementById('count-l');
+  console.log(countL)
   if (event.key === 's') {
     countOne++;
+    // @ts-ignore
     countS.innerHTML = countOne;
   } else if (event.key === 'l') {
     countTwo++;
+    // @ts-ignore
     countL.innerHTML = countTwo;
-  } else {
+  }
+   else {
     gameInfo.innerHTML = "please enter right key";
   }
+
 }
 document.addEventListener('keypress', keyPresses);
 
@@ -78,4 +93,5 @@ document.addEventListener('keypress', keyPresses);
 function restartTheGame() {
   document.location.href = "";
 }
+// @ts-ignore
 restart_button.addEventListener("click", restartTheGame);
