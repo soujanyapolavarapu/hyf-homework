@@ -1,5 +1,4 @@
 "use strict"
-let name = '';
 let toDo = [];
 
 console.log(getReply(123));
@@ -19,13 +18,14 @@ console.log(getReply('Set a timer for 4 minutes'));
 
 
 function getReply(command) {
+  let name;
   if (typeof command !== 'string') {
     let response = 'please enter valid command';
     return response;
   }
   if (command.slice(0, 16) === 'Hello my name is') {
     let newString = command.split(" ");
-    name = newString[newString.length - 1];
+     name = newString[newString.length - 1];
     let response = 'Nice to meet you ' + name;
     return response;
   }
@@ -63,39 +63,39 @@ function getReply(command) {
 
   if (command === 'What day is it today?') {
     //currentDate();
-    var display = new Date();
-    var todaysDate = display.getDate();
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var displayYear = new Date();
-    var month = months[display.getMonth()];
-    var year = display.getFullYear();
-    var statement = `${todaysDate}. of ${month} ${year}`;
+   let display = new Date();
+   let todaysDate = display.getDate();
+   let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+   let displayYear = new Date();
+   let month = months[display.getMonth()];
+   let year = display.getFullYear();
+   let statement = `${todaysDate}. of ${month} ${year}`;
     return statement;
   }
 
   if (command.slice(0, 7) === 'what is') {
-    let newString1 = command.split(" ");
-    var result;
-    var a = 0;
-    a = Number(newString1[2]);
-    var b = 0;
-    b = Number(newString1[4]);
+    let ArithmeticOperations = command.split(" ");
+    let result;
+    let a = 0;
+    a = Number(ArithmeticOperations[2]);
+    let b = 0;
+    b = Number(ArithmeticOperations[4]);
 
-    if (newString1[3] === '+') {
+    if (ArithmeticOperations[3] === '+') {
       result = a + b;
       // console.log('add');
       return result;
 
-    } else if (newString1[3] === '-') {
+    } else if (ArithmeticOperations[3] === '-') {
       result = a - b;
       //console.log('sub');
       return result;
 
-    } else if (newString1[3] === '*') {
+    } else if (ArithmeticOperations[3] === '*') {
       result = a * b;
       //console.log('multi');
       return result;
-    } else if (newString1[3] === '/') {
+    } else if (ArithmeticOperations[3] === '/') {
       result = a / b;
       //console.log('div');
       return result;
@@ -105,14 +105,13 @@ function getReply(command) {
   }
 
   if (command === 'Set a timer for 4 minutes') {
-    let newString2 = command.split(" ");
+    let setTimer = command.split(" ");
     var display = new Date();
     var minutes = display.getMinutes();
-    var milliSeconds = newString2[4] * 60 * 1000;
-    var onclick = setTimeout(timer, milliSeconds);
-    //alert('Timer done');
-
-    return `Timer set for ${newString2[4]} minutes`;
+    var milliSeconds = Number(setTimer[4]) * 60 * 1000;
+    //setTimeout(timer, milliSeconds);
+    
+    return `Timer set for ${setTimer[4]} minutes`;
 
   }
 }
@@ -121,15 +120,4 @@ function timer() {
   console.log('timer done');
 }
 
-/*function currentDate(){
-  var display = new Date();
-  var todaysDate= display.getDate();
-  var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  var displayYear = new Date();
-  var month= months[display.getMonth()];
-  var year = display.getFullYear();
-  var statement = `${todaysDate}. of ${month} ${year}`;
-  console.log(statement);
-  return ;
 
-}*/
