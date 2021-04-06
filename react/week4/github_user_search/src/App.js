@@ -1,6 +1,6 @@
 import "./App.css";
-import User from "./consumeUser.js";
-import UserRepos from "./githubApi.js";
+import User from "./User.js";
+import UserRepos from "./UserRepos.js";
 
 function App() {
   return (

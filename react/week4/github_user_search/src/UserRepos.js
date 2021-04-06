@@ -3,10 +3,8 @@ import { UserSearchContext } from "./userSearch.js";
 
 const UserRepos = () => {
   const userContext = useContext(UserSearchContext);
-  console.log(userContext);
 
   const api = "https://api.github.com/users/HackYourFuture-CPH/repos";
-  console.log(api);
   useEffect(() => {
     userContext.setIsload(!userContext.isLoad);
     fetch(api)
