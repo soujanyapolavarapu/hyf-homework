@@ -6,7 +6,7 @@ class Product {
 
   convertToCurrency(currency){
   const url='https://api.exchangeratesapi.io/latest?base=DKK';
-   fetch('https://api.exchangeratesapi.io/latest?base=DKK')
+   fetch(url)
      .then(response => response.json())
      .then(data => {
        console.log(data)
@@ -72,22 +72,6 @@ class ShoppingCart {
       });
 }
 }
-
-//searching the product with product name
-/*const input =document.getElementById('searchValue');
-input.addEventListener('input' ,()=>{
-  const inputValue = input.value;
-const ul =document.getElementById('search_results');
-ul.innerHTML='';
-if(inputValue){
-  shoppingCart.searchProduct(productName).forEach((product)=>{
-    const li = document.createElement('li');
-    li.textContent =`${product.name}:${product.price}`;
-    ul.appendChild(li);
-  });
-}
-});
-*/
 
 const shoppingCart = new ShoppingCart();
 const flatscreen = new Product("flat-screen", 5000);
