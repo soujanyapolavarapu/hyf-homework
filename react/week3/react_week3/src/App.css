@@ -1,0 +1,74 @@
+.App {
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    /* background-color: rgb(206, 194, 194); */
+}
+
+.styles{
+  width: 700px;
+  margin-left: 350px;
+  border: 2px solid black; 
+  border-radius: 10px;
+  box-shadow: slategrey;
+  background-color: rgb(235, 231, 228);
+}
+body{
+  background-color: rosybrown;
+}
+ button{
+   box-shadow: sienna;
+   background-color: rgb(223, 215, 215);
+ }
+div{
+  padding: 5px;
+}
+form{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 400px;
+  padding: 20px;
+  margin-left: 450px;
+  background-color: rgb(238, 215, 196);
+}
+input{
+  background-color: pink;
+  padding: 5px;
+}
+button{
+  background-color: powderblue;
+}
+h1{
+  text-align: center;
+  margin: 0px auto;
+  padding:15px;
+}
+h2{
+  width: 350px;
+  margin: 10px auto;
+  padding: 5px;
+  /* color:rgb(54, 44, 44); */
+  background-color:   rgba(137, 179, 196, 0.4) ;
+  border:1px solid rgba(149, 146, 146, 0.7);
+ border-radius: 10px;
+}
+.todo{  
+    display: flex;
+    flex-direction: row;  
+    justify-content:  center  ; 
+    align-items: center;    
+    margin: 0px auto;
+    font-size: 1.4em;
+    
+}
+.items{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+}
+
+
+
+
