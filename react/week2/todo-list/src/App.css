@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+  
+}
+body{
+  background-color: peachpuff;
+}
+li{
+  list-style-type: none;
+}
+ /* .checkbox{
+  width: 20px;
+  height: 20px;
+  background: #555;
+  margin: 20px ;
+    
+  border-radius: 3px;
+}  */
+button{
+  background-color: rgb(73, 35, 15);
+  color:white;
+  font-size: 1em;
+  padding: 5px;
+  transition: all 0.5s;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.checkbox{
+  text-decoration: line-through;
+}
+
+.todoItems{
+  display: flex;
+  flex-direction: row;  
+  justify-content:  space-between;
+  width : 500px;
+  border: 1px solid rgb(219, 194, 194);  
+  background-color: rgb(241, 151, 166);
+  border-radius: 10px;
+  margin: 5px auto;
+  font-size: 1.5em;
+  padding: 5px;
+  
+}
+
